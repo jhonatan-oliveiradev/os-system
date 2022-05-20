@@ -1,0 +1,26 @@
+package com.jhonatan.os.config;
+
+import java.util.Arrays;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
+
+import com.jhonatan.os.domain.Cliente;
+import com.jhonatan.os.domain.OS;
+import com.jhonatan.os.domain.Tecnico;
+import com.jhonatan.os.domain.enums.Prioridade;
+import com.jhonatan.os.domain.enums.Status;
+import com.jhonatan.os.repositories.ClienteRepository;
+import com.jhonatan.os.repositories.OSRepository;
+import com.jhonatan.os.repositories.TecnicoRepository;
+
+@Configuration
+@Profile("test")
+public class TestConfig {
+
+	public void instanciaDB() {
+
+	}
+
+}

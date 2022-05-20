@@ -1,0 +1,49 @@
+package com.jhonatan.os;
+
+import java.util.Arrays;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.jhonatan.os.domain.Cliente;
+import com.jhonatan.os.domain.OS;
+import com.jhonatan.os.domain.Tecnico;
+import com.jhonatan.os.domain.enums.Prioridade;
+import com.jhonatan.os.domain.enums.Status;
+import com.jhonatan.os.repositories.ClienteRepository;
+import com.jhonatan.os.repositories.OSRepository;
+import com.jhonatan.os.repositories.TecnicoRepository;
+
+@SpringBootApplication
+public class OsApplication implements CommandLineRunner {
+
+	@Autowired
+	private TecnicoRepository tecnicoRepository;
+	@Autowired
+	private ClienteRepository clienteRepository;
+	@Autowired
+	private OSRepository osRepository;
+
+	public static void main(String[] args) {
+		SpringApplication.run(OsApplication.class, args);
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+
+		Tecnico t1 = new Tecnico(null, "Jhonatan Oliveira", "386.669.470-98", "(55) 91234-5678");
+		Cliente c1 = new Cliente(null, "Betina Campos", "286.970.210-81", "(55) 98877-6655");
+
+		OS os1 = new OS(null, Prioridade.ALTA, "Test create OS", Status.ANDAMENTO, t1, c1);
+
+		t1.getList().add(os1);
+		c1.getList().add(os1);
+
+		tecnicoRepository.saveAll(Arrays.asList(t1));
+		clienteRepository.saveAll(Arrays.asList(c1));
+		osRepository.saveAll(Arrays.asList(os1));
+	}
+
+}

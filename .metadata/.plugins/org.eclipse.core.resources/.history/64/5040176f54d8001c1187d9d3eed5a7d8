@@ -1,0 +1,29 @@
+package com.jhonatan.os.dtos;
+
+import org.hibernate.validator.constraints.br.CPF;
+
+import com.jhonatan.os.domain.Tecnico;
+
+public class TecnicoDTO {
+
+	private Integer id;
+	private String nome;
+
+	@CPF
+	private String cpf;
+	private String telefone;
+
+	public TecnicoDTO() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public TecnicoDTO(Tecnico obj) {
+		super();
+		this.id = obj.getId();
+		this.nome = obj.getNome();
+		this.cpf = obj.getCpf();
+		this.telefone = obj.getTelefone();
+	}
+
+}

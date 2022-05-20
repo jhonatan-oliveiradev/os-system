@@ -1,0 +1,5 @@
+package com.jhonatan.os.domain;
+
+public class Tecnico {
+
+}

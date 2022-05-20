@@ -1,0 +1,26 @@
+package com.jhonatan.os;
+
+import java.util.Arrays;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.jhonatan.os.domain.Cliente;
+import com.jhonatan.os.domain.OS;
+import com.jhonatan.os.domain.Tecnico;
+import com.jhonatan.os.domain.enums.Prioridade;
+import com.jhonatan.os.domain.enums.Status;
+import com.jhonatan.os.repositories.ClienteRepository;
+import com.jhonatan.os.repositories.OSRepository;
+import com.jhonatan.os.repositories.TecnicoRepository;
+
+@SpringBootApplication
+public class OsApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(OsApplication.class, args);
+	}
+
+}

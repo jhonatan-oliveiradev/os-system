@@ -1,0 +1,5 @@
+package com.jhonatan.os.domain.enums;
+
+public enum Prioridade {
+
+}
