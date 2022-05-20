@@ -9,8 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
+import com.jhonatan.os.domain.Pessoa;
 import com.jhonatan.os.domain.Tecnico;
 import com.jhonatan.os.dtos.TecnicoDTO;
+import com.jhonatan.os.repositories.PessoaRepository;
 import com.jhonatan.os.repositories.TecnicoRepository;
 import com.jhonatan.os.services.exceptions.ObjectNotFoundException;
 
@@ -19,6 +21,9 @@ public class TecnicoService {
 
 	@Autowired
 	private TecnicoRepository repository;
+
+	@Autowired
+	private PessoaRepository pessoaRepository;
 
 	public Tecnico findById(Integer id) {
 		Optional<Tecnico> obj = repository.findById(id);
@@ -51,6 +56,10 @@ public class TecnicoService {
 		return repository.save(oldObj);
 	}
 
+	/*
+	 * Deleta um Tecnico pelo ID
+	 */
+
 	public void delete(Integer id) {
 		Tecnico obj = findById(id);
 
@@ -62,8 +71,12 @@ public class TecnicoService {
 		repository.deleteById(id);
 	}
 
-	private Tecnico findByCPF(TecnicoDTO objDTO) {
-		Tecnico obj = repository.findByCPF(objDTO.getCpf());
+	/*
+	 * Busca Tecnico pelo CPF
+	 */
+
+	private Pessoa findByCPF(TecnicoDTO objDTO) {
+		Pessoa obj = pessoaRepository.findByCPF(objDTO.getCpf());
 		if (obj != null) {
 			return obj;
 		}

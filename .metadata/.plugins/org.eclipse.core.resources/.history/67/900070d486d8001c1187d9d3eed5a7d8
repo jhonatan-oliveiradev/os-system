@@ -1,0 +1,20 @@
+package com.jhonatan.os.dtos;
+
+import java.io.Serializable;
+import java.time.LocalDateTime;
+
+import com.jhonatan.os.domain.Cliente;
+import com.jhonatan.os.domain.Tecnico;
+
+public class OSDTO implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	private Integer id;
+	private LocalDateTime dataAbertura;
+	private LocalDateTime dataFechamento;
+	private Integer prioridade;
+	private String obervaçoes;
+	private Integer status;
+	private Tecnico tecnico;
+	private Cliente cliente;
+}
