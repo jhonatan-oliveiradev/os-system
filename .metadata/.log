@@ -5596,3 +5596,57 @@ java.lang.Error: SWT Resource was not properly disposed
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-20 14:10:19.570
 !MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.VoOMpVUm => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-20 14:14:10.167
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-20 14:14:10.168
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@64270e74[org.springframework.tooling.boot.ls:1.33.0.202204250653(id=1000)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-20 14:14:10.169
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-20 14:14:11.818
+!MESSAGE Boot LS startup time from start to initialized: 1647ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-20 14:14:11.880
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.AuniLHbsisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-20 14:14:11.881
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-20 14:14:11.882
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-20 14:14:11.883
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-20 14:14:11.884
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-20 14:14:11.884
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.AuniLHbs => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-20 14:14:11.890
+!MESSAGE classpath=93 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-20 14:14:11.894
+!MESSAGE buffering callback sts4.classpath.AuniLHbs os false 93
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-20 14:14:11.894
+!MESSAGE executing callback sts4.classpath.AuniLHbs 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-20 14:14:12.139
+!MESSAGE executing callback sts4.classpath.AuniLHbs SUCCESS [done]
+
+!ENTRY org.eclipse.lsp4e 2 0 2022-05-20 14:16:51.670
+!MESSAGE Timeout waiting for data to generate LS hover
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
