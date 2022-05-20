@@ -3,6 +3,8 @@ package com.jhonatan.os.dtos;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
+import javax.validation.constraints.NotEmpty;
+
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.jhonatan.os.domain.OS;
 
@@ -16,7 +18,10 @@ public class OSDTO implements Serializable {
 
 	@JsonFormat(pattern = "dd/MM/yyyy HH:mm")
 	private LocalDateTime dataFechamento;
+
 	private Integer prioridade;
+
+	@NotEmpty(message = "O campo OBSERVAÇÕES é obrigatório.")
 	private String observaçoes;
 	private Integer status;
 	private Integer tecnico;
