@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { FormControl, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
 import { Tecnico } from "src/app/models/tecnico";
 import { TecnicoService } from "src/app/services/tecnico.service";
@@ -11,10 +12,14 @@ import { TecnicoService } from "src/app/services/tecnico.service";
 export class TecnicoCreateComponent implements OnInit {
   tecnico: Tecnico = {
     id: "",
-    nome: "Lucas Geraldo Almeida",
-    cpf: "635.818.248-09",
-    telefone: "(77) 98386-8375",
+    nome: "",
+    cpf: "",
+    telefone: "",
   };
+
+  nome = new FormControl("", [Validators.minLength(5)]);
+  cpf = new FormControl("", [Validators.minLength(11)]);
+  telefone = new FormControl("", [Validators.minLength(11)]);
 
   constructor(private router: Router, private service: TecnicoService) {}
 
@@ -33,12 +38,34 @@ export class TecnicoCreateComponent implements OnInit {
       (err) => {
         if (err.error.error.match("já cadastrado")) {
           this.service.message(err.error.error);
-        } else if (err.error.errors[0].message === "inválido") {
+        } else if (
+          err.error.errors[0].message ===
+          "número do registro de contribuinte individual brasileiro (CPF) inválido"
+        ) {
           this.service.message("CPF inválido!");
-        } else {
-          this.service.message("Erro ao cadastrar!");
         }
       }
     );
+  }
+
+  errorValidName() {
+    if (this.nome.invalid) {
+      return "O nome deve ter no mínimo 5 caracteres!";
+    }
+    return false;
+  }
+
+  errorValidCpf() {
+    if (this.cpf.invalid) {
+      return "O CPF deve ter 11 e 15 caracteres!";
+    }
+    return false;
+  }
+
+  errorValidTelefone() {
+    if (this.telefone.invalid) {
+      return "O telefone deve ter 11 e 18 caracteres!";
+    }
+    return false;
   }
 }
