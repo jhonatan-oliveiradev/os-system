@@ -1,0 +1,22 @@
+.footer {
+  height: 7%;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+p a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+p a:hover {
+  color: #caf0f8;
+}

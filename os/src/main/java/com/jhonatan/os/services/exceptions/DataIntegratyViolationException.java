@@ -1,4 +1,4 @@
-package com.jhonatan.os.resources.exceptions;
+package com.jhonatan.os.services.exceptions;
 
 public class DataIntegratyViolationException extends RuntimeException {
 	private static final long serialVersionUID = 1L;

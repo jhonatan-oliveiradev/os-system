@@ -7,6 +7,7 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
+import com.jhonatan.os.services.exceptions.DataIntegratyViolationException;
 import com.jhonatan.os.services.exceptions.ObjectNotFoundException;
 
 @ControllerAdvice
@@ -34,7 +35,7 @@ public class ResourceExceptionHandler {
 				"Erro na validação dos campos!");
 
 		for (FieldError x : e.getBindingResult().getFieldErrors()) {
-			error.ADDError(x.getField(), x.getDefaultMessage());
+			error.addError(x.getField(), x.getDefaultMessage());
 		}
 
 		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(error);
