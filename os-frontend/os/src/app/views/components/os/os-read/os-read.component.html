@@ -34,7 +34,13 @@
 
     <ng-container matColumnDef="prioridade">
       <th mat-header-cell *matHeaderCellDef>Prioridade</th>
-      <td mat-cell *matCellDef="let element">{{ element.prioridade }}</td>
+      <td
+        mat-cell
+        *matCellDef="let element"
+        class="{{ prioridade(element.prioridade) }}"
+      >
+        {{ element.prioridade }}
+      </td>
     </ng-container>
 
     <ng-container matColumnDef="status">
@@ -45,8 +51,10 @@
     <ng-container matColumnDef="action">
       <th mat-header-cell *matHeaderCellDef>Ações</th>
       <td mat-cell *matCellDef="let element">
-        <a routerLink="os"> <i id="edit" class="material-icons">edit</i></a>
-        <a routerLink="os">
+        <a routerLink="update/{{ element.id }}">
+          <i id="edit" class="material-icons">edit</i></a
+        >
+        <a routerLink="view/{{ element.id }}">
           <i id="view" class="material-icons">visibility</i></a
         >
       </td>

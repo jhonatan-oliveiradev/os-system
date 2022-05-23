@@ -45,8 +45,6 @@
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
     <fullyQualifiedTypeName name="javax.validation.constraints.NotEmpty"/>
     <fullyQualifiedTypeName name="com.jhonatan.os.domain.OS"/>
-    <fullyQualifiedTypeName name="com.jhonatan.os.domain.enums.Prioridade"/>
-    <fullyQualifiedTypeName name="com.jhonatan.os.domain.enums.Status"/>
     <fullyQualifiedTypeName name="com.jhonatan.os.services.TecnicoService"/>
     <fullyQualifiedTypeName name="com.jhonatan.os.domain.Tecnico"/>
     <fullyQualifiedTypeName name="com.jhonatan.os.domain.Cliente"/>
@@ -60,4 +58,6 @@
     <fullyQualifiedTypeName name="org.springframework.http.ResponseEntity"/>
     <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.CrossOrigin"/>
+    <fullyQualifiedTypeName name="com.jhonatan.os.domain.enums.Status"/>
+    <fullyQualifiedTypeName name="com.jhonatan.os.domain.enums.Prioridade"/>
 </qualifiedTypeNameHistroy>
