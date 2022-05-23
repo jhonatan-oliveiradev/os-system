@@ -7401,3 +7401,18 @@ java.util.concurrent.TimeoutException
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-23 12:12:24.496
 !MESSAGE executing callback sts4.classpath.qLwVGVPi SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-23 12:27:14.238
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.qLwVGVPi
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-23 12:27:14.239
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.qLwVGVPi
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-23 12:27:14.240
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-23 12:27:14.241
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.qLwVGVPi => OK
+
+!ENTRY org.eclipse.ui 2 2 2022-05-23 12:27:14.775
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
